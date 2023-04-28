@@ -1,4 +1,6 @@
-# <p align="center">MERN Social Media</p>
+# MERN Social Media
+
+A full-stack social-media project built with MongoDB, Express, React and NodeJS. MERN Social Media is a web application that allows users to create, interact with posts, likes. It works well on different screens and devices.
 
 ## PRD
 
