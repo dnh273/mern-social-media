@@ -36,7 +36,7 @@ app.use(express.json({ limit: '30mb', extended: true }));
 app.use(express.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
 
-app.use('api/assets', express.static(path.join(__dirname, 'public/assets')));
+app.use('assets', express.static(path.join(__dirname, 'public/assets')));
 app.use(express.static('public/'))
 /* FILE STORAGE */
 const storage = multer.diskStorage({
@@ -52,15 +52,15 @@ const upload = multer({ storage });
 
 
 // ROUTER WITH FILES
-app.post('api/auth/register', upload.single('picture'), register);
-app.post('api/posts', verifyToken, upload.single('picture'), createPost)
-app.get('api/auth/logout', verifyToken, logout)
+app.post('auth/register', upload.single('picture'), register);
+app.post('posts', verifyToken, upload.single('picture'), createPost)
+app.get('auth/logout', verifyToken, logout)
 
 
 // ROUTES
-app.use("api/auth", authRoutes)
-app.use("api/users", userRoutes)
-app.use('api/posts', postRoutes)
+app.use("auth", authRoutes)
+app.use("users", userRoutes)
+app.use('posts', postRoutes)
 
 app.use(notFoundMiddleware)
 app.use(errorHandleMiddleware)
