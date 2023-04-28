@@ -11,7 +11,7 @@ Diagram database : https://dbdiagram.io/d/644bdd6bdca9fb07c436fc6d
 
 ```bash
 $ cd client (admin)
-$ yarn install && yarn start
+$ npm install && npm run dev
 ```
 
 ### Back-end
@@ -20,5 +20,5 @@ Config `.env` file
 
 ```bash
 $ cd server
-$ npm install && npm run dev
+$ node main.js
 ```
