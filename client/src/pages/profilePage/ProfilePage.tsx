@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { Box, useMediaQuery } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";

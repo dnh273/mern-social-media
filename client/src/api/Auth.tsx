@@ -1,3 +1,5 @@
+import { DOMAIN } from "../utils/setting/config";
+
 interface UserLogin {
   email: string;
   password: string;
@@ -13,7 +15,7 @@ interface UserRegistration {
 }
 
 export const loggedInRequest = (userLogin: UserLogin) => {
-  return fetch("http://localhost:6001/auth/login", {
+  return fetch(`${DOMAIN}/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(userLogin),
@@ -21,7 +23,7 @@ export const loggedInRequest = (userLogin: UserLogin) => {
 };
 
 export const savedUserRequest = (userRegistration: UserRegistration) => {
-  return fetch("http://localhost:6001/auth/register", {
+  return fetch(`${DOMAIN}/auth/register`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(userRegistration),

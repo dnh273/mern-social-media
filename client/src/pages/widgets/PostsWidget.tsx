@@ -18,7 +18,7 @@ const PostsWidget = ({ userId, isProfile = false }: PostsWidgetProps) => {
       const response = await getPostsRequest(token);
       const data = await response.json();
       if (response.status === 200) {
-        dispatch(setPosts({ posts: data }));
+        dispatch(setPosts({ posts: data.reverse() }));
       }
     } catch (err) {
       console.log("err" + err);
@@ -39,7 +39,6 @@ const PostsWidget = ({ userId, isProfile = false }: PostsWidgetProps) => {
       console.log("err" + err);
     }
   };
-  console.log("posts", !posts);
 
   useEffect(() => {
     if (isProfile === true) {

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   AttachFileOutlined,
   DeleteOutlined,
@@ -55,10 +56,7 @@ const MyPostWidget = ({ picturePath, isMe }: MyPostWidgetProps) => {
         formData.append("picture", image);
         formData.append("picturePath", image.name);
       }
-      // console.log(formData.get("userId"));
-      // console.log(formData.get("description"));
-      // console.log(formData.get("picture"));
-      // console.log(formData.get("picturePath"));
+
       const response = await createPostRequest(token, formData);
       const posts = await response.json();
       console.log(response);

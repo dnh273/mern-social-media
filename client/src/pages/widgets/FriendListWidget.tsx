@@ -18,10 +18,14 @@ const FriendListWidget = ({ userId }: FriendListWidgetProps) => {
   const friends = useAppSelector((state) => state.auth.user.friends);
 
   const getFriends = async () => {
-    const response = await getFriendsRequest(userId, token);
+    try {
+      const response = await getFriendsRequest(userId, token);
 
-    const data = await response.json();
-    dispatch(setFriends({ friends: data }));
+      const data = await response.json();
+      dispatch(setFriends({ friends: data }));
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => {

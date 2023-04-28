@@ -1,4 +1,5 @@
 import { Avatar, Box } from "@mui/material";
+import { DOMAIN } from "../utils/setting/config";
 
 interface UserImageProps {
   image?: string;
@@ -16,7 +17,7 @@ const UserImage = ({ image, size = "60px" }: UserImageProps) => {
           width={size}
           height={size}
           alt="user"
-          src={`http://localhost:6001/assets/${image}`}
+          src={`${DOMAIN}/assets/${image}`}
         />
       </Box>
     );

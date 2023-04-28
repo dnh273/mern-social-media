@@ -13,6 +13,7 @@ import WidgetWrapper from "../../components/WidgetWrapper";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { setPost } from "../../redux";
 import { ThemeSettings } from "../../theme";
+import { DOMAIN } from "../../utils/setting/config";
 
 interface PostWidgetProps {
   postId: string;
@@ -82,7 +83,7 @@ const PostWidget = ({
           height="auto"
           alt="post"
           style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-          src={`http://localhost:6001/assets/${picturePath}`}
+          src={`${DOMAIN}/assets/${picturePath}`}
         />
       )}
       <FlexBetween mt="0.25rem">
