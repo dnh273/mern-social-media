@@ -7,6 +7,7 @@ A full-stack social-media project built with MongoDB, Express, React and NodeJS.
 Diagram database : https://dbdiagram.io/d/644bdd6bdca9fb07c436fc6d
 <img src="https://i.ibb.co/4SwHLYc/MERN-Social-Media.png" alt="diagram db"/>
 
+
 ## Installation
 
 ### Front-end
@@ -24,3 +25,6 @@ Config `.env` file
 $ cd server
 $ node main.js
 ```
+
+## Update version : 
+Coming soon : https://github.com/dnh273/social-media-platform
